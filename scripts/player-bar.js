@@ -28,4 +28,29 @@
 		player.playPause(previousSong);
 
 	});
+
+//Playback position
+$('#time-control input').on('input', function(event) {
+	player.skipTo(event.target.value);
+});
+
+//Playback position
+
+
+		//slider
+		setInterval( () => {
+			if (player.playState !== 'playing') { return; }
+			const currentTime = player.getTime();
+			const duration = player.getDuration();
+			const percent = (currentTime/duration) * 100;
+
+		//update time
+		$('#time-control .current-time').text(currentTime);
+		//update time	
+			$('#time-control input').val(percent);
+		}, 1000);
+
+
+		//slider end
+	
 }
