@@ -58,7 +58,16 @@ class Player {
     //sets song volume
     this.soundObject.setVolume(percent);
   }
+
+  //prettyTime (timeInSeconds) {
+    //const currentTime = ((Math.floor(player.getTime()/60)) + ':' + (Math.floor(player.getTime() % 60));
+
+
+
+  //}
 }
 
 const player = new Player();
+
+
 
